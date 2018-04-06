@@ -24,8 +24,17 @@ Above are tutorial webisites which tell you how to install OpenCV library on vis
 
 
 ## How does this work
-CT data is a 3D data which usually store as dicom file format, multiple 2D images can be load using Matlab function dicomread, as shown in example Matlab code "readicom.m". In this program, we want to synthesize X-ray like images in any indicated slicing angle. The first step is build a 2D plane which vertical direction to z axis. After moving center of this 2D plane to origin, we rotate the 2D plane with x_rotation_angle, y_rotation_angle, z_rotation_angle along x axis, y axis, and z axis. Then we move the rotated 2D plane to position indicated by slice_distance. Then global gray level calibration is applied which removed uneven mean gray level in different CT image. After that, trilinear interpolation is applied to approximately sample slice image data. The example of r_rotation_angle=90, y_rotation_angle=0, z_rotation_angle=0, slice_distance=50 is shown below.
+CT data is a 3D data which usually store as dicom file format, multiple 2D images can be load using Matlab function dicomread, as shown in example Matlab code "readicom.m". 
+In this program, we want to synthesize X-ray like images in any indicated slicing angle. Following are steps:
+* Build a 2D point array which store points spread on 2D plane which vertical direction to z axis. 
+* Moving center of this 2D plane to origin.
+* Rotate the 2D plane with x_rotation_angle, y_rotation_angle, z_rotation_angle along x axis, y axis, and z axis. 
+* Move center of the rotated 2D plane to position indicated by slice_distance. 
+* Global gray level calibration is applied which removed uneven mean gray level in different CT image. 
+* Trilinear interpolation is applied to approximately sample slice image data. 
+* The example of x_rotation_angle=90, y_rotation_angle=0, z_rotation_angle=0, slice_distance=50 is shown below.
 <p align="center"><img src="/fig1.png" height="100%" width="100%"></p><br />
 
+From above steps, we can generate a 2D image in indicated rotation_angle and indicated slice_distance. By changing slice_distance value but fixing rotation_angle, we can extract multiple 2D slicing image in same rotation_angle. Then we simply compute average image of those 2D slicing image, which is a reverse step of how CT data generated from X-Ray image. Therefore, we can generate a X-Ray-like 2D image by computing average image of 2D slicing image. The example of X-Ray-like 2D image generated from CT data in x_rotation_angle=90, y_rotation_angle=0, z_rotation_angle=0 is shown below.
 <p align="center"><img src="/fig2.png" height="80%" width="80%"></p><br />
 
