@@ -18,6 +18,7 @@ Above are tutorial webisites which tell you how to install OpenCV library on vis
 * Copy all file into your project folder<br />
 * Build project and find main.exe directory, download Fig folder and put it into main.exe folder  <br />
 * Open cmd.exe and go to your debug directory where main.exe was generated <br />
+* command variable: main.exe, method, x_rotation_angle, y_rotation_angle, z_rotation_angle, slice_distance  <br />
 * Enter command "main.exe 1 90 0 0 10" <br />
 * Have fun! <br />
 
