@@ -1,5 +1,5 @@
 # CT-Xray-image-synthesis
-Extract 2D image from CT data and synthesize X-ray like image using OpenCV3.0 library on Visual studio 2012 platform.
+Extract 2D image from CT data and synthesize X-ray like image using OpenCV3.0 library on Visual studio 2012 platform. This program provide two functions: 1. Extract a 2D slice image from 3D CT data in any indicated angle and position. 2. Synthesize a 2D X-Ray-like image from 3D CT data by integrating all 2D slicing image in same angle but different postion.
 
 
 ## How can you get started
