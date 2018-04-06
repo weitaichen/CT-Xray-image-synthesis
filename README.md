@@ -24,6 +24,7 @@ Above are tutorial webisites which tell you how to install OpenCV library on vis
 
 ## How does this work
 <p align="center"><img src="/fig1.png" height="80%" width="80%"></p><br />
+<p align="center"><img src="/fig2.png" height="80%" width="80%"></p><br />
 ## Which function inside this toolbox(Method)
 
 
