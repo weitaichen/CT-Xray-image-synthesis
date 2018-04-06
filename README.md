@@ -16,9 +16,9 @@ Above are tutorial webisites which tell you how to install OpenCV library on vis
 * Add library dependency:Project->Properties->linker->Input->Additional dependecies->opencv_world300d.lib<br />
 * Download msvcp120d.dll and msvcr120d.dll to main.exe folder <br />
 * Copy all file into your project folder<br />
-* Build project and find main.exe directory, put lena.png file into that folder <br />
+* Build project and find main.exe directory, download Fig folder and put it into main.exe folder  <br />
 * Open cmd.exe and go to your debug directory where main.exe was generated <br />
-* Enter command "main.exe lena.png 1" <br />
+* Enter command "main.exe 1 90 0 0 10" <br />
 * Have fun! <br />
 
 
