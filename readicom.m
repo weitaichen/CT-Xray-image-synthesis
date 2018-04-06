@@ -1,7 +1,3 @@
-% info = dicominfo('hum0001.dcm');
-% Y = dicomread(info);
-% figure
-% imshow(Y,[]);
 
 srcFiles = dir('D:\program\matlab\tt\*.dcm');  % the folder in which ur images exists
 for i = 1 : length(srcFiles)
